@@ -16,7 +16,7 @@
     <td><%= artwork.title %></td>
     <td><%= artwork.caption %></td>
     <td><%= artwork.client_id %></td>
-    <td><%= artwork.folio_id %></td>
+    <td><%= link_to artwork.folio.name, artwork.folio %></td>
     <td><%= link_to 'Show', artwork %></td>
     <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
     <td><%= link_to 'Destroy', artwork, :confirm => 'Are you sure?', :method => :delete %></td>
