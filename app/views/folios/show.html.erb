@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @folio.name %>
+</p>
+
+
+
+
+
+<h1>Listing artworks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Caption</th>
+    <th>Client</th>
+    <th>Folio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @folio.artworks.each do |artwork| %>
+  <tr>
+    <td><%= artwork.title %></td>
+    <td><%= artwork.caption %></td>
+    <td><%= artwork.client_id %></td>
+    <td><%= link_to artwork.folio.name, artwork.folio %></td>
+    <td><%= link_to 'Show', artwork %></td>
+    <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+    <td><%= link_to 'Destroy', artwork, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Artwork', new_artwork_path %>
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_folio_path(@folio) %> |
+<%= link_to 'Back', folios_path %>
