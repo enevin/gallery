@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111171250) do
+ActiveRecord::Schema.define(:version => 20101111193124) do
+
+  create_table "artworks", :force => true do |t|
+    t.string   "title"
+    t.text     "caption"
+    t.integer  "client_id",  :null => false
+    t.integer  "folio_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", :force => true do |t|
     t.string   "name",       :null => false
