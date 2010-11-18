@@ -21,7 +21,7 @@ class CommentsControllerTest < ActionController::TestCase
       post :create, :comment => @comment.attributes
     end
 
-    assert_redirected_to comment_path(assigns(:comment))
+    assert_redirected_to folio_path(assigns(:comment).folio)
   end
 
   test "should show comment" do

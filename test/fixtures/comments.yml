@@ -4,12 +4,12 @@ one:
   name: MyString
   email: MyString
   body: MyText
-  folio_id: 1
-  client_id: 1
+  folio: one
+  client: one
 
 two:
   name: MyString
   email: MyString
   body: MyText
-  folio_id: 1
-  client_id: 1
+  folio: one
+  client: one

@@ -44,3 +44,5 @@
 <% for comment in @folio.comments %>
   <%= render "comments/show", :comment => comment %>
 <% end %>
+
+<%= render "comments/form", :comment => Comment.new(:folio => @folio, :client_id => 1) %>
