@@ -6,9 +6,6 @@
 </p>
 
 
-
-
-
 <h1>Listing artworks</h1>
 
 <table>
@@ -26,7 +23,6 @@
   <tr>
     <td><%= artwork.title %></td>
     <td><%= artwork.caption %></td>
-    <td><%= artwork.client_id %></td>
     <td><%= link_to artwork.folio.name, artwork.folio %></td>
     <td><%= link_to 'Show', artwork %></td>
     <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
@@ -41,9 +37,10 @@
 
 
 
-
-
-
-
 <%= link_to 'Edit', edit_folio_path(@folio) %> |
 <%= link_to 'Back', folios_path %>
+
+
+<% for comment in @folio.comments %>
+  <%= render "comments/show", :comment => comment %>
+<% end %>
