@@ -3,11 +3,9 @@
 one:
   title: MyString
   caption: MyText
-  client_id: 1
   folio_id: 1
 
 two:
   title: MyString
   caption: MyText
-  client_id: 1
   folio_id: 1
