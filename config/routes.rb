@@ -3,6 +3,8 @@ Gallery::Application.routes.draw do
 
   resources :artworks
 
+  get "stylesheets/:action.css", :controller => :stylesheets, :format => :css
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
